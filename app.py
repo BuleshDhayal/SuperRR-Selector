@@ -399,6 +399,197 @@ html, body, .stApp {
 """, unsafe_allow_html=True)
 
 
+
+# SUPERRR LIGHT ROYAL PINK OVERRIDE
+st.markdown("""
+<style>
+:root {
+    --rr-pink: #e82e88;
+    --rr-hot: #ff69ad;
+    --rr-plum: #542044;
+    --rr-ink: #382238;
+    --rr-muted: #765e72;
+    --rr-border: #f3b5d3;
+}
+
+/* Main canvas */
+.stApp {
+    background:
+      radial-gradient(ellipse at 90% 0%, #ffe0ef 0%, transparent 42%),
+      linear-gradient(135deg, #fff7fb 0%, #fce8f2 55%, #fff2f8 100%) !important;
+    color: var(--rr-ink) !important;
+}
+[data-testid="stMain"] {
+    background: transparent !important;
+}
+.block-container {
+    max-width: 1500px !important;
+}
+
+/* Default readable text */
+[data-testid="stMain"] p,
+[data-testid="stMain"] label,
+[data-testid="stMain"] li,
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] {
+    color: var(--rr-ink);
+}
+[data-testid="stCaptionContainer"] p {
+    color: var(--rr-muted) !important;
+}
+h1, h2, h3, h4 {
+    color: #572044 !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffe4f0 0%, #f9d6e8 100%) !important;
+    border-right: 1px solid #efb0d0 !important;
+}
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: #542044 !important;
+}
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    border-radius: 12px !important;
+    margin: 4px 0 !important;
+}
+[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {
+    background: #f8c1dc !important;
+    border: 1px solid #e82e88 !important;
+}
+[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) p {
+    color: #a4145c !important;
+    font-weight: 800 !important;
+}
+
+/* Metrics */
+[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #ffffff, #fff0f7) !important;
+    border: 1px solid #f0b5d2 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 18px rgba(130, 35, 85, .07) !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #76516c !important;
+}
+[data-testid="stMetricValue"] {
+    color: #d51e79 !important;
+}
+
+/* Alerts - fix pale/invisible text */
+[data-testid="stAlert"] {
+    background: #fff0d8 !important;
+    border: 1px solid #f0c58e !important;
+    border-radius: 14px !important;
+}
+[data-testid="stAlert"] *,
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] span {
+    color: #56351d !important;
+    opacity: 1 !important;
+}
+
+/* Tables and charts */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    border: 1px solid #efb5d2 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+[data-testid="stPlotlyChart"] {
+    background: #fffafd !important;
+    border: 1px solid #f0bfd8 !important;
+    border-radius: 15px !important;
+}
+
+/* Inputs */
+input, textarea, [data-baseweb="select"] {
+    border-color: #e9a3c7 !important;
+}
+.stButton > button, .stDownloadButton > button {
+    background: linear-gradient(100deg, #e82e88, #bd176a) !important;
+    color: white !important;
+    border: 1px solid #d9277d !important;
+    border-radius: 11px !important;
+    font-weight: 700 !important;
+}
+
+/* Credits card: keep text dark and readable */
+div[style*="grid-template-columns:1.3fr 1.4fr 1fr 1fr"] {
+    background: linear-gradient(120deg, #ffe2ef, #fff4fa) !important;
+    border-color: #efa4c9 !important;
+}
+div[style*="grid-template-columns:1.3fr 1.4fr 1fr 1fr"] * {
+    color: #542044 !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .block-container {
+        padding: 1rem .8rem 2.5rem !important;
+        width: 100% !important;
+    }
+    h1 { font-size: 1.55rem !important; line-height: 1.25 !important; }
+    h2 { font-size: 1.25rem !important; }
+
+    /* Hero logo and heading stack vertically */
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) > [data-testid="column"] {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: 1 1 100% !important;
+    }
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) [data-testid="stImage"] {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) img {
+        max-width: 135px !important;
+        max-height: 150px !important;
+        object-fit: contain !important;
+    }
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) h1,
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) h2,
+    [data-testid="stHorizontalBlock"]:has([data-testid="stImage"]) p {
+        text-align: center !important;
+    }
+
+    /* Stack columns on phones */
+    [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+    }
+    [data-testid="stHorizontalBlock"] > [data-testid="column"] {
+        min-width: min(100%, 240px) !important;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 12px !important;
+    }
+    [data-testid="stMetricValue"] {
+        font-size: 1.3rem !important;
+    }
+
+    /* Credits become two readable columns */
+    div[style*="grid-template-columns:1.3fr 1.4fr 1fr 1fr"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 15px 10px !important;
+    }
+
+    [data-testid="stDataFrame"] {
+        max-width: 100% !important;
+        overflow-x: auto !important;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 @st.cache_data
 def load_csv(path):
     if path.exists():
@@ -1056,38 +1247,57 @@ elif page == "RR Squad Builder":
     st.write("- Retained squad: 19 players")
     st.caption("Final auction prices, registration and availability are not verified.")
 
+
 st.sidebar.divider()
 st.sidebar.markdown("""
 <div style="
-    background:linear-gradient(145deg,#30152d,#171b30);
-    border:1px solid rgba(240,68,152,.48);
-    border-radius:15px;
+    background:linear-gradient(145deg,#fff0f7,#fbd5e8);
+    border:1px solid #e995bf;
+    border-radius:16px;
     padding:15px 13px;
     margin-top:8px;
 ">
-    <div style="font-size:10px;letter-spacing:2px;color:#ff91c4;font-weight:900;">
+    <div style="font-size:10px;letter-spacing:2px;color:#c21d70;font-weight:900;">
         PROJECT CREATOR
     </div>
-    <div style="font-size:19px;font-weight:900;color:#ffffff;margin-top:7px;">
+    <div style="font-size:19px;font-weight:900;color:#542044;margin-top:8px;">
         Bulesh Choudhary
     </div>
-    <div style="font-size:11px;color:#cbb8ca;margin:4px 0 12px;">
+    <div style="font-size:11px;color:#76516c;margin:4px 0 15px;">
         Founder &amp; Research Lead
     </div>
-    <a href="https://www.instagram.com/buleshdhayal/"
-       target="_blank"
-       style="display:block;color:#ff9bc9;text-decoration:none;font-weight:700;padding:5px 0;">
-       ◎ Instagram · @buleshdhayal
-    </a>
-    <a href="https://www.linkedin.com/in/bulesh-choudhary96/"
-       target="_blank"
-       style="display:block;color:#ff9bc9;text-decoration:none;font-weight:700;padding:5px 0;">
-       in LinkedIn · Bulesh Choudhary
-    </a>
+
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <a href="https://www.instagram.com/buleshdhayal/"
+         target="_blank" rel="noopener"
+         aria-label="Open Instagram"
+         style="display:flex;align-items:center;justify-content:center;
+         width:43px;height:43px;border-radius:12px;
+         background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);">
+        <svg viewBox="0 0 24 24" width="25" height="25" fill="none"
+             stroke="white" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/bulesh-choudhary96/"
+         target="_blank" rel="noopener"
+         aria-label="Open LinkedIn"
+         style="display:flex;align-items:center;justify-content:center;
+         width:43px;height:43px;border-radius:12px;background:#0a66c2;">
+        <svg viewBox="0 0 24 24" width="25" height="25" fill="white">
+          <path d="M5.2 3.5a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zM3.4 9.5h3.6V21H3.4zM9.1 9.5h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.3 4.3 5.3V21h-3.6v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.1z"/>
+        </svg>
+      </a>
+    </div>
+    <div style="font-size:11px;color:#76516c;margin-top:12px;">
+        Tap an icon to visit my profile
+    </div>
 </div>
-<div style="font-size:10px;color:#9aa3b5;margin-top:12px;line-height:1.6;">
+<div style="font-size:10px;color:#76516c;margin-top:12px;line-height:1.6;">
     SuperRR Selector · Research and prediction kept separate<br>
     Registration / fitness status: NOT VERIFIED unless independently confirmed.
 </div>
 """, unsafe_allow_html=True)
-
